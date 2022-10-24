@@ -27,3 +27,9 @@ npm i bootstrap jquery
 
 
 npm install @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-brands-svg-icons
+
+Create Component
+-- ng generate component component-name
+-- ng g c component-name
+
+ng g c /guest/login
