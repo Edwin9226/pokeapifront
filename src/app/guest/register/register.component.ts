@@ -27,6 +27,13 @@ export class RegisterComponent implements OnInit {
   register(){
     this.authenticationServices.register(this.user).subscribe(data=>{
       this.router.navigate(['/login']);
+    },err=>{
+      if(err?.status === 409){
+        this.errorMessage= 'el nombre del usuario ya existe.'
+      }else{
+        this.errorMessage='Error inesperado. error es :'+ err?. errorMessage;
+        console.log(err);
+      }
     });
   }
 }
