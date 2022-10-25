@@ -59,3 +59,9 @@ button.btn.btn-primary.me-1
 
 .modal-body
 .modal-footer>button.btn.btn-secondary[data-bs-dismiss='modal']+button.btn-primary[type='submit']
+
+purchase
+
+.d-flex.flex-wrap>.card.m-3[style='width:300px; background-color:lightgray;']
+
+.card-body>h5.card-title+h6.card-subtitle.mb-2.text-muted+p.card-text+button.btn.w-100.mt-3[style='background-color:mediumseagreen;']
