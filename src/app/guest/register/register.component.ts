@@ -16,16 +16,16 @@ export class RegisterComponent implements OnInit {
   faUser = faUserCircle;
   errorMessage: string= "";
 
-  constructor(private authenticationServices: AuthenticationService, private router: Router) { }
+  constructor(private authenticationService: AuthenticationService, private router: Router) { }
 
   ngOnInit(): void {
-    if(this.authenticationServices.currentUserValue?.id){
+    if(this.authenticationService.currentUserValue?.id){
       this.router.navigate(['/profile']);
     }
   }
 
   register(){
-    this.authenticationServices.register(this.user).subscribe(data=>{
+    this.authenticationService.register(this.user).subscribe(data=>{
       this.router.navigate(['/login']);
     },err=>{
       if(err?.status === 409){

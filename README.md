@@ -33,3 +33,9 @@ Create Component
 -- ng g c component-name
 
 ng g c /guest/login
+ng g c /guest/register
+ng g c /guest/home
+
+ng g c /user/profile
+
+
