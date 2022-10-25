@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book.model';
 import { BookService } from 'src/app/services/book.service';
 
+declare var $: any;
+
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
@@ -26,5 +28,8 @@ errorMessage: string= "";
     });
    }
 
+   showBookModal(){
+    $('#bookModal').modal('show');
+   }
  
 }

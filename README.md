@@ -52,3 +52,10 @@ admin component
 (thead>tr>th[scope='col']*6)+tbody>tr>th[scope='row']+td*5
 
 button.btn.btn-primary.me-1
+
+.modal.fade[id='bookModal'][tabIndex='-1']>.modal-dialog>.modal-content>form
+
+.modal-header>h5.modal-title+button.btn-close[data-bs-dismiss='modal']
+
+.modal-body
+.modal-footer>button.btn.btn-secondary[data-bs-dismiss='modal']+button.btn-primary[type='submit']
