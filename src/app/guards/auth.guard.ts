@@ -23,7 +23,6 @@ export class AuthGuard implements CanActivate {
     
       if(this.currentUser)
       {
-        debugger;
         if(route.data['roles']?.indexOf(this.currentUser.role)=== -1){
           this.router.navigate(['/401']);
           return false;

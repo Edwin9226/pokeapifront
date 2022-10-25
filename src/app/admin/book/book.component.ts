@@ -21,7 +21,7 @@ errorMessage: string= "";
 
    saveBook(){
     this.bookService.saveBook(this.book).subscribe(data=>{
-//...
+   $('#bookModal').modal('hide');
     }, err=>{
       this.errorMessage= 'Inesperado error al momento de guardar libro.'
       console.log(err);
