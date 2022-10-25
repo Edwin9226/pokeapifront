@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Book } from 'src/app/models/book.model';
 import { BookService } from 'src/app/services/book.service';
 
@@ -11,16 +11,17 @@ declare var $: any;
 })
 export class BookComponent {
 
- book: Book= new Book();
 errorMessage: string= "";
 
-
+@Input()book: Book= new Book();
+@Output() save= new EventEmitter<any>();
   constructor( private bookService:BookService) {
 
    }
 
    saveBook(){
     this.bookService.saveBook(this.book).subscribe(data=>{
+      this.save.emit(data);
    $('#bookModal').modal('hide');
     }, err=>{
       this.errorMessage= 'Inesperado error al momento de guardar libro.'
