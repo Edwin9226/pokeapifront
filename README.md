@@ -41,3 +41,14 @@ ng g c /user/profile
 .a.btn.btn-link
 
 ng g guard /guards/auth
+
+ng g service /services/request-base
+
+
+admin component
+.container>.pt-5
+.card>.card-header+.card-body>table.table.table-striped
+.row>.col-6>h3
+(thead>tr>th[scope='col']*6)+tbody>tr>th[scope='row']+td*5
+
+button.btn.btn-primary.me-1
