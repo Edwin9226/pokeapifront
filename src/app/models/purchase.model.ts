@@ -1,14 +1,13 @@
 export class Purchase{
-    id: number | undefined;
-    userId: number | undefined;
-    bookId: number | undefined;
-    price: number | undefined;
-    purchaseTime: Date = new Date();
+    // id: number | undefined;
+    // userId: number | undefined;
+    // pokeId: number | undefined;
+    // price: number | undefined;
 
 
-constructor(userId?: number, bookId?: number, price?: number){
- this.userId= userId;
- this.bookId= bookId;
- this.price= price;
+constructor(public userId?: number,public pokeId?: number,public price?: number){
+//  this.userId= userId;
+//  this.pokeId= pokeId;
+//  this.price= price;
 }
 }
