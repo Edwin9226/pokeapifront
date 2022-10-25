@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="pt-5">
+        <div class="alert alert-danger" *ngIf="errorMessage">
+            {{errorMessage}}
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Todos los pokemones.</h3>
+                       
+                    </div>
+
+                    <div class="col-6 text-end">
+                        <button class="btn btn-primary" (click)="createPokeRequest()">Crear Pokemon</button>
+                      </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Poder</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of pokeList; index as ind">
+                            <th scope="row">{{ind+1}}</th>
+                            <td>{{item.title}}</td>
+                            <td>{{item.price}}</td>
+                            <td>{{item.author}}</td>
+                            <td>
+                                <button class="btn btn-primary me-1" (click)="editPokeRequest(item)">
+                                    Editar
+                                </button>
+                                <button class="btn btn-danger" (click)="deletePoke(item, ind)">Eliminar</button>
+                            </td> 
+
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<app-poke [poke]="selectedPoke" (save)="savePokeWatcher($event)"></app-poke>

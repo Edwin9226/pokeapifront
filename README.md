@@ -22,6 +22,40 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## bootstrap
+npm i bootstrap jquery
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+npm install @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-brands-svg-icons
+
+Create Component
+-- ng generate component component-name
+-- ng g c component-name
+
+ng g c /guest/login
+ng g c /guest/register
+ng g c /guest/home
+
+ng g c /user/profile
+
+.a.btn.btn-link
+
+ng g guard /guards/auth
+
+ng g service /services/request-base
+
+
+admin component
+.container>.pt-5
+.card>.card-header+.card-body>table.table.table-striped
+.row>.col-6>h3
+(thead>tr>th[scope='col']*6)+tbody>tr>th[scope='row']+td*5
+
+button.btn.btn-primary.me-1
+
+.modal.fade[id='bookModal'][tabIndex='-1']>.modal-dialog>.modal-content>form
+
+.modal-header>h5.modal-title+button.btn-close[data-bs-dismiss='modal']
+
+.modal-body
+.modal-footer>button.btn.btn-secondary[data-bs-dismiss='modal']+button.btn-primary[type='submit']
