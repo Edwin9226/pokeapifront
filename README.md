@@ -38,4 +38,6 @@ ng g c /guest/home
 
 ng g c /user/profile
 
+.a.btn.btn-link
 
+ng g guard /guards/auth

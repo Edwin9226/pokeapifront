@@ -21,7 +21,7 @@ export class AppComponent {
   }
 
   isAdmin(){
-    return this.currentUser?.rol === Rol.ADMIN;
+    return this.currentUser?.role === Rol.ADMIN;
   }
 
   logOut(){

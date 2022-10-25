@@ -3,9 +3,11 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin/admin.component';
 import { NotFoundComponent } from './error/not-found/not-found.component';
 import { UnauthorizedComponent } from './error/unauthorized/unauthorized.component';
+import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './guest/home/home.component';
 import { LoginComponent } from './guest/login/login.component';
 import { RegisterComponent } from './guest/register/register.component';
+import { Rol } from './models/rol.enum';
 import { ProfileComponent } from './user/profile/profile.component';
 
 const routes: Routes = [
@@ -15,9 +17,17 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
 
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile', 
+  component: ProfileComponent,
+    canActivate:[AuthGuard],
+    data:{roles:[Rol.ADMIN, Rol.USER]}
+     },
 
-  { path: 'admin', component: AdminComponent },
+  { path: 'admin', 
+  component: AdminComponent,
+canActivate:[AuthGuard],
+data:{roles: [Rol.ADMIN] }
+},
 
   { path: '404', component: NotFoundComponent },
   { path: '401', component: UnauthorizedComponent }

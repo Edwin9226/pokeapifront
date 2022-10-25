@@ -6,5 +6,5 @@ export class User{
     password: string= "";
     name: string= "";
     token:string= "";
-    rol: Rol= Rol.USER;
+    role: Rol= Rol.USER;
 }
